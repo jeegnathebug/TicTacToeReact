@@ -1,0 +1,52 @@
+{
+  "name": "tic-tac-toe-react",
+  "version": "1.0.0",
+  "description": "TicTacToe game in React",
+  "main": "src/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=development webpack",
+    "start:local": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeegnathebug/TicTacToeReact.git"
+  },
+  "keywords": [
+    "React",
+    "Typescript",
+    "Tic tac toe"
+  ],
+  "author": "jeegnathebug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeegnathebug/TicTacToeReact/issues"
+  },
+  "homepage": "https://github.com/jeegnathebug/TicTacToeReact#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

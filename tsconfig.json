@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "es2018",
+        "lib": ["esnext", "dom"],
+        "baseUrl": "src",
+        "module": "commonjs",
+        "outDir": "./dist",
+        "alwaysStrict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        "strictNullChecks": true,
+    },
+    "include": ["src/**/*"],
+    "exclude": [
+        "node_modules"
+    ]
+}
