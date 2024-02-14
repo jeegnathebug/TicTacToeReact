@@ -50,7 +50,7 @@ const Game = () => {
                     nextPlayerMarker={nextPlayerMarker}
                     squares={currentSquares}
                     onPlay={handlePlay}
-                    isGameOver={winner !== null}
+                    isGameOver={winner !== null || currentMove === 9}
                 />
             </Grid>
             <Grid xs={12} sm={12} md={6} lg={6} xl={6}>
