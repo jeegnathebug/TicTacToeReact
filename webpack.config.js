@@ -11,6 +11,10 @@ module.exports = {
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ],
     },
     resolve: {
@@ -18,6 +22,7 @@ module.exports = {
         alias: {
             assets: path.resolve('./src/assets'),
             components: path.resolve('./src/components'),
+            i18n: path.resolve('./src/i18n'),
         },
     },
     output: {
@@ -26,7 +31,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html'
-        })
-    ]
+            template: './public/index.html',
+        }),
+    ],
 };
