@@ -31,6 +31,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ items }) => {
                         item.onClick && item.onClick();
                         handleClick(event);
                     }}
+                    startIcon={item.icon}
                 >
                     {item.label}
                 </Button>

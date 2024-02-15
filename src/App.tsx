@@ -2,6 +2,7 @@ import * as React from 'react';
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { Box, Container } from '@mui/material';
+import LanguageIcon from '@mui/icons-material/Language';
 import Game from 'components/Game';
 import MenuBar from 'components/Menu/MenuBar';
 import { MenuItemData } from 'components/Menu/MenuItemData';
@@ -13,6 +14,7 @@ const App: React.FC = () => {
     const menuItems: MenuItemData[] = [
         {
             label: t('language'),
+            icon: <LanguageIcon />,
             subItems: [
                 { label: 'English', onClick: () => i18n.changeLanguage('en') },
                 { label: 'हिंदी', onClick: () => i18n.changeLanguage('hi') },
