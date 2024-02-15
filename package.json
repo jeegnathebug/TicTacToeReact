@@ -7,7 +7,8 @@
     "lint": "eslint . --ext .ts --ext .tsx src/",
     "lint:fix": "eslint . --ext .ts --ext .tsx --fix  src/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=development webpack",
+    "build:prod": "NODE_ENV=production webpack",
+    "build:local": "NODE_ENV=development webpack",
     "start:local": "webpack serve --open"
   },
   "repository": {
