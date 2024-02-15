@@ -4,15 +4,13 @@ import { Button } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 
-const Square = ({
-    value,
-    disabled,
-    onSquareClick,
-}: {
+interface SquareProps {
     value: PlayerMarker | null;
     disabled: boolean;
     onSquareClick: () => void;
-}) => {
+}
+
+const Square: React.FC<SquareProps> = ({ value, disabled, onSquareClick }) => {
     const onClick = () => {
         if (value !== null || disabled) {
             // button has been clicked or game is over

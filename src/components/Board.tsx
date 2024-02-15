@@ -3,17 +3,14 @@ import { PlayerMarker } from 'types';
 import { Grid } from '@mui/material';
 import Square from 'components/Square';
 
-const Board = ({
-    nextPlayerMarker,
-    squares,
-    isGameOver,
-    onPlay,
-}: {
+interface BoardProps {
     nextPlayerMarker: PlayerMarker;
     squares: Array<PlayerMarker | null>;
     isGameOver: boolean;
     onPlay: (squares: Array<PlayerMarker | null>) => void;
-}) => {
+}
+
+const Board: React.FC<BoardProps> = ({ nextPlayerMarker, squares, isGameOver, onPlay }) => {
     function handleClick(i: number) {
         const squaresCopy = squares.slice();
         squaresCopy[i] = nextPlayerMarker;

@@ -2,13 +2,12 @@ import React from 'react';
 import { PlayerMarker } from 'types';
 import { Button } from '@mui/material';
 
-const History = ({
-    history,
-    jumpTo,
-}: {
+interface HistoryProps {
     history: Array<Array<PlayerMarker | null>>;
     jumpTo: (move: number) => void;
-}) => {
+}
+
+const History: React.FC<HistoryProps> = ({ history, jumpTo }) => {
     const moves = history.map((_squares, move) => {
         let description;
         if (move === 0) {

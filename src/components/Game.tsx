@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { PlayerMarker } from 'types';
 import { Grid, Typography } from '@mui/material';
 import { Card } from '@mui/material';
 import Board from 'components/Board';
 import History from 'components/History';
 
-const Game = () => {
+const Game: React.FC = () => {
+    const { t } = useTranslation();
+
     const [currentMove, setCurrentMove] = useState(0);
     const [history, setHistory] = useState([Array(9).fill(null)] as Array<Array<PlayerMarker | null>>);
 
@@ -35,7 +38,7 @@ const Game = () => {
         <Grid className='game' container>
             <Grid xs={12}>
                 <Typography variant='h1' gutterBottom={true}>
-                    Tic Tac Toe
+                    {t('title')}
                 </Typography>
             </Grid>
             <Grid xs={12}>
