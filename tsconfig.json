@@ -4,7 +4,7 @@
         "lib": ["esnext", "dom"],
         "baseUrl": "src",
         "module": "commonjs",
-        "outDir": "./dist",
+        "outDir": "./build",
         "alwaysStrict": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
