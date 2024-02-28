@@ -1,6 +1,7 @@
 import React from 'react';
 import { PlayerMarker } from 'types';
 import { Button } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 interface HistoryProps {
     history: Array<Array<PlayerMarker | null>>;
@@ -8,12 +9,15 @@ interface HistoryProps {
 }
 
 const History: React.FC<HistoryProps> = ({ history, jumpTo }) => {
+    const { t } = useTranslation();
+    const moveStrings: string[] = t('moveNumbers', { returnObjects: true });
+
     const moves = history.map((_squares, move) => {
         let description;
         if (move === 0) {
-            description = 'Go to game start';
+            description = t('historyGameStart');
         } else {
-            description = 'Go to move #' + move;
+            description = moveStrings[move - 1];
         }
         return (
             <li key={move}>

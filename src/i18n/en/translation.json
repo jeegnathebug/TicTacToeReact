@@ -1,4 +1,19 @@
 {
     "title": "Tic Tac Toe",
-    "language": "Language"
+    "language": "Language",
+    "historyGameStart": "Go to game start",
+    "moveNumbers": [
+        "Go to move #1",
+        "Go to move #2",
+        "Go to move #3",
+        "Go to move #4",
+        "Go to move #5",
+        "Go to move #6",
+        "Go to move #7",
+        "Go to move #8",
+        "Go to move #9"
+    ],
+    "tieGame": "Tie game!",
+    "winner": "{{player}} wins!",
+    "nextPlayer": "Next player: {{player}}"
 }

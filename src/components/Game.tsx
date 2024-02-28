@@ -27,11 +27,11 @@ const Game: React.FC = () => {
         setCurrentMove(move);
     }
 
-    let status = `Next player: ${nextPlayerMarker}`;
+    let status = t('nextPlayer').replace('{{player}}', nextPlayerMarker);
     if (winner) {
-        status = `Winner: ${winner}`;
+        status = t('winner').replace('{{player}}', winner);
     } else if (currentMove === 9) {
-        status = 'Tie game!';
+        status = t('tieGame');
     }
 
     return (

@@ -10,5 +10,6 @@ A tic-tac-toe game written in React and Typescript, using webpack and yarn.
 
 ## Getting Started
 
-1. In the root directory, run `docker compose up -d`
-2. Go to `http://localhost:8080/`
+1. In the root directory, run `yarn`
+2. In the root directory, run `docker compose up -d`
+3. Go to `http://localhost:8080/`
