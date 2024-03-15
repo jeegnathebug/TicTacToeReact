@@ -1,26 +1,15 @@
-import * as React from 'react';
-import i18n from 'i18next';
-import { useTranslation } from 'react-i18next';
-import { Box, Container } from '@mui/material';
-import LanguageIcon from '@mui/icons-material/Language';
+import React from 'react';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
 import Game from 'components/Game';
 import MenuBar from 'components/Menu/MenuBar';
-import { MenuItemData } from 'components/Menu/MenuItemData';
 import 'i18n/config';
+import { useTranslation } from 'react-i18next';
 
 const App: React.FC = () => {
     const { t } = useTranslation();
 
-    const menuItems: MenuItemData[] = [
-        {
-            label: t('language'),
-            icon: <LanguageIcon />,
-            subItems: [
-                { label: 'English', onClick: () => i18n.changeLanguage('en') },
-                { label: 'हिंदी', onClick: () => i18n.changeLanguage('hi') },
-            ],
-        },
-    ];
     return (
         <Container maxWidth='lg'>
             <Box
@@ -30,7 +19,8 @@ const App: React.FC = () => {
                 minHeight='100vh'
                 sx={{ bgcolor: '#cfe8fc' }}
             >
-                <MenuBar items={menuItems} />
+                <CssBaseline />
+                <MenuBar title={t('title')}/>
                 <Game />
             </Box>
         </Container>

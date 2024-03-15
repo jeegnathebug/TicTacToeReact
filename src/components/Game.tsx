@@ -37,11 +37,6 @@ const Game: React.FC = () => {
     return (
         <Grid className='game' container>
             <Grid xs={12}>
-                <Typography variant='h1' gutterBottom={true}>
-                    {t('title')}
-                </Typography>
-            </Grid>
-            <Grid xs={12}>
                 <Card>
                     <Typography variant='h4' gutterBottom={true}>
                         {status}
