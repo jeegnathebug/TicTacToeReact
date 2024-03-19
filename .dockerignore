@@ -1,0 +1,9 @@
+node_modules/
+.idea/
+.github/
+.eslintrc
+.gitignore
+.prettierrc
+docker-compose.yml
+Dockerfile
+README.md

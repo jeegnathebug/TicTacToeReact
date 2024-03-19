@@ -1,16 +1,12 @@
-FROM node:18-alpine as base
+FROM node:18-alpine AS base
 LABEL authors="jeegnathebug"
 EXPOSE 80
 
-FROM base as dependencies
-
-WORKDIR /install
-COPY package.json yarn.lock ./
-RUN yarn
-
-FROM dependencies as development
+FROM base as development
 ENV NODE_ENV=development
 
 WORKDIR /code
+
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
 COPY ./ /code/
-COPY --from=dependencies /install/node_modules ./node_modules

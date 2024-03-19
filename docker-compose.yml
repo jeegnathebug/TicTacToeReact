@@ -8,7 +8,8 @@ services:
         ports:
             - "8080:8080"
         volumes:
-            - ./:/code
+            - ./public:/code/public
+            - ./src:/code/src
         environment:
             - NODE_ENV=development
         command: [ "yarn", "start:local" ]
