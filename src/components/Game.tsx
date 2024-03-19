@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PlayerMarker } from 'types';
-import { Grid, Typography } from '@mui/material';
-import { Card } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
 import Board from 'components/Board';
 import History from 'components/History';
 
@@ -35,15 +36,15 @@ const Game: React.FC = () => {
     }
 
     return (
-        <Grid className='game' container>
-            <Grid xs={12}>
+        <Grid className='game' container spacing={1}>
+            <Grid item xs={12}>
                 <Card>
                     <Typography variant='h4' gutterBottom={true}>
                         {status}
                     </Typography>
                 </Card>
             </Grid>
-            <Grid xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                 <Board
                     nextPlayerMarker={nextPlayerMarker}
                     squares={currentSquares}
@@ -51,7 +52,7 @@ const Game: React.FC = () => {
                     isGameOver={winner !== null || currentMove === 9}
                 />
             </Grid>
-            <Grid xs={12} sm={12} md={6} lg={6} xl={6}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                 <Card>
                     <History history={history} jumpTo={jumpTo} />
                 </Card>

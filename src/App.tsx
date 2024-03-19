@@ -11,7 +11,7 @@ const App: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <Container maxWidth='lg'>
+        <Container maxWidth={'md'}>
             <Box
                 display='flex'
                 justifyContent='center'

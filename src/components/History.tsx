@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlayerMarker } from 'types';
-import { Button } from '@mui/material';
+import Button from '@mui/material/Button';
 import { useTranslation } from 'react-i18next';
 
 interface HistoryProps {
